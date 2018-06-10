@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+  color: #000; }
+
+html, body {
+  width: 100%; }
+
+.nav {
+  z-index: 999;
+  position: fixed;
+  height: 56px;
+  width: 100%;
+  background-color: #ffcf32; }
+  .nav .logo {
+    display: inline-block;
+    height: inherit;
+    line-height: 56px;
+    text-align: center;
+    cursor: pointer;
+    width: 180px;
+    padding: 0 10px;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-align: center;
+    color: #fff; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  text-align: center;
+  background-color: #333;
+  font-size: .8rem;
+  color: #fff; }
+
+@media all and (min-width: 780px) {
+  .hambuger-icon {
+    display: inline-block;
+    height: inherit;
+    line-height: 56px;
+    text-align: center;
+    cursor: pointer; }
+    .hambuger-icon .nav-group .nav-item {
+      display: inline-block;
+      height: inherit;
+      line-height: 56px;
+      text-align: center;
+      cursor: pointer;
+      width: 12vw; }
+    .hambuger-icon .nav-group .nav-item:hover {
+      background-color: #f4bb00; }
+  #target, .top, .mid, .dow {
+    display: none; }
+  #content {
+    position: absolute;
+    top: 56px;
+    width: 100%;
+    padding: 20px 10px; }
+  #container {
+    column-count: 3;
+    column-gap: 30px; }
+  .card {
+    width: 30vw;
+    padding: 5%;
+    margin: 0;
+    margin-bottom: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    break-inside: avoid; } }
+
+@media all and (max-width: 780px) {
+  .hambuger-icon {
+    position: absolute;
+    right: 20px;
+    width: 56px;
+    padding: 0 auto;
+    position: absolute;
+    top: 0;
+    height: inherit;
+    width: 56px; }
+    .hambuger-icon .top, .hambuger-icon .mid, .hambuger-icon .dow {
+      position: absolute;
+      display: inline-block;
+      right: 14px;
+      width: 28px;
+      height: 4.48px;
+      background-color: #fff;
+      pointer-events: none;
+      transition: 0.25s ease; }
+    .hambuger-icon .top {
+      top: 18px; }
+    .hambuger-icon .mid {
+      top: 26px; }
+    .hambuger-icon .dow {
+      top: 34px; }
+    .hambuger-icon label {
+      display: block;
+      width: 56px;
+      height: inherit;
+      transition: 0.25s ease; }
+    .hambuger-icon input[type=checkbox] {
+      display: none; }
+    .hambuger-icon input[type=checkbox]:checked ~ .top {
+      position: absolute;
+      top: 24px;
+      transform: rotate(45deg); }
+    .hambuger-icon input[type=checkbox]:checked ~ .mid {
+      display: none; }
+    .hambuger-icon input[type=checkbox]:checked ~ .dow {
+      position: absolute;
+      top: 24px;
+      transform: rotate(-45deg); }
+    .hambuger-icon .nav-group {
+      position: fixed;
+      top: 56px;
+      left: 0;
+      height: calc(100vh - 56px);
+      width: 100vw;
+      background-color: #fec300;
+      opacity: 0; }
+      .hambuger-icon .nav-group .nav-item {
+        position: relative;
+        width: 100vw;
+        height: 10vh;
+        line-height: 10vh;
+        font-size: 1rem;
+        text-align: center;
+        border-bottom: 2px solid #f4bb00; }
+      .hambuger-icon .nav-group .nav-item:hover {
+        background-color: #f4bb00; }
+    .hambuger-icon input[type=checkbox]:checked ~ .nav-group {
+      transition: 0.25s ease;
+      opacity: 1; }
+  #content {
+    position: absolute;
+    top: 56px; }
+  .card:nth-child(2n) {
+    padding: 5%;
+    background-color: #eee; }
+  .card:nth-child(2n+1) {
+    padding: 5%;
+    background-color: #fff; } }
